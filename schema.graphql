@@ -4,3 +4,35 @@ type ExampleEntity @entity {
   id: Bytes! # bytes32
   pair: Bytes! # bytes32
 }
+
+# type BathToken @entity {
+#   id: ID!
+
+# }
+
+# type BathPair @entity {
+#   id: ID!
+# }
+
+# type BathHouse @entity {
+#   id: ID!
+# }
+
+"""
+StrategistTrade stores information about a strategist's trade from the BathPair contract.
+"""
+type StrategistTrade @entity {
+  "ID of the ask for this strategist's trade."
+  askId: Int!
+  "Amount of the ask for this strategist's trade."
+  askAmt: BigInt!
+  "ID of the bid for this strategist's trade."
+  bidId: Int!
+  "Amount of the bid for this strategist's trade."
+  bidAmt: BigInt!
+  "Timestamp for this strategist's trade."
+  timestamp: BigInt!
+  "Address of the strategist."
+  strategist: Bytes!
+}
+
