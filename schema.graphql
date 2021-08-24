@@ -1,5 +1,19 @@
 # Entities created from RubiconMarket contract.
 
+type UserTrade @entity {
+  id: Bytes!
+  isBuy: Bool!
+  payGem: Bytes!
+  buyGem: Bytes!
+  payAmount: BigInt!
+  buyAmount: BigInt!
+  completed: Bool!
+  killed: Bool!
+  timestamp: BigInt
+  transactionHash: Bytes!
+}
+
+
 """
 
 """
