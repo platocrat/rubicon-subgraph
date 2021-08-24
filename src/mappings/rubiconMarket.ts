@@ -22,7 +22,7 @@ import {
   LogUnsortedOffer,
   OfferDeleted
 } from "../generated/RubiconMarket/RubiconMarket"
-import { ExampleEntity } from "../generated/schema"
+import { } from "../../generated/schema/"
 
 export function handleFeeTake(event: FeeTake): void {
   // Entities can be loaded from the store using a string ID; this ID
@@ -113,40 +113,40 @@ export function handleFeeTake(event: FeeTake): void {
   // - contract.stopped(...)
 }
 
-export function handleLogBump(event: LogBump): void {}
+export function handleLogBump(event: LogBump): void { }
 
-export function handleLogBuyEnabled(event: LogBuyEnabled): void {}
+export function handleLogBuyEnabled(event: LogBuyEnabled): void { }
 
-export function handleLogDelete(event: LogDelete): void {}
+export function handleLogDelete(event: LogDelete): void { }
 
-export function handleLogInsert(event: LogInsert): void {}
+export function handleLogInsert(event: LogInsert): void { }
 
-export function handleLogInt(event: LogInt): void {}
+export function handleLogInt(event: LogInt): void { }
 
-export function handleLogItemUpdate(event: LogItemUpdate): void {}
+export function handleLogItemUpdate(event: LogItemUpdate): void { }
 
-export function handleLogKill(event: LogKill): void {}
+export function handleLogKill(event: LogKill): void { }
 
-export function handleLogMake(event: LogMake): void {}
+export function handleLogMake(event: LogMake): void { }
 
-export function handleLogMatch(event: LogMatch): void {}
+export function handleLogMatch(event: LogMatch): void { }
 
-export function handleLogMatchingEnabled(event: LogMatchingEnabled): void {}
+export function handleLogMatchingEnabled(event: LogMatchingEnabled): void { }
 
-export function handleLogMinSell(event: LogMinSell): void {}
+export function handleLogMinSell(event: LogMinSell): void { }
 
-export function handleLogNote(event: LogNote): void {}
+export function handleLogNote(event: LogNote): void { }
 
-export function handleLogSetAuthority(event: LogSetAuthority): void {}
+export function handleLogSetAuthority(event: LogSetAuthority): void { }
 
-export function handleLogSetOwner(event: LogSetOwner): void {}
+export function handleLogSetOwner(event: LogSetOwner): void { }
 
-export function handleLogSortedOffer(event: LogSortedOffer): void {}
+export function handleLogSortedOffer(event: LogSortedOffer): void { }
 
-export function handleLogTake(event: LogTake): void {}
+export function handleLogTake(event: LogTake): void { }
 
-export function handleLogTrade(event: LogTrade): void {}
+export function handleLogTrade(event: LogTrade): void { }
 
-export function handleLogUnsortedOffer(event: LogUnsortedOffer): void {}
+export function handleLogUnsortedOffer(event: LogUnsortedOffer): void { }
 
-export function handleOfferDeleted(event: OfferDeleted): void {}
+export function handleOfferDeleted(event: OfferDeleted): void { }
