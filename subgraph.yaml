@@ -16,26 +16,26 @@ dataSources:
       language: wasm/assemblyscript
       file: ./src/mappings/rubiconMarket.ts
       entities:
-        - FeeTake
-        - LogBump
-        - LogBuyEnabled
-        - LogDelete
-        - LogInsert
-        - LogInt
-        - LogItemUpdate
+        # - FeeTake
+        # - LogBump
+        # - LogBuyEnabled
+        # - LogDelete
+        # - LogInsert
+        # - LogInt
+        # - LogItemUpdate
         - LogKill
         - LogMake
-        - LogMatch
-        - LogMatchingEnabled
-        - LogMinSell
-        - LogNote
-        - LogSetAuthority
-        - LogSetOwner
-        - LogSortedOffer
+        # - LogMatch
+        # - LogMatchingEnabled
+        # - LogMinSell
+        # - LogNote
+        # - LogSetAuthority
+        # - LogSetOwner
+        # - LogSortedOffer
         - LogTake
-        - LogTrade
-        - LogUnsortedOffer
-        - OfferDeleted
+        # - LogTrade
+        # - LogUnsortedOffer
+        # - OfferDeleted
       abis:
         - name: RubiconMarket
           file: ./abis/RubiconMarket.json
