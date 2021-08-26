@@ -42,31 +42,49 @@ export class UserTrade extends Entity {
     this.set("id", Value.fromString(value));
   }
 
-  get isBuy(): boolean {
-    let value = this.get("isBuy");
+  get isLimit(): boolean {
+    let value = this.get("isLimit");
     return value.toBoolean();
   }
 
-  set isBuy(value: boolean) {
-    this.set("isBuy", Value.fromBoolean(value));
+  set isLimit(value: boolean) {
+    this.set("isLimit", Value.fromBoolean(value));
   }
 
-  get payGem(): string {
+  get maker(): Bytes {
+    let value = this.get("maker");
+    return value.toBytes();
+  }
+
+  set maker(value: Bytes) {
+    this.set("maker", Value.fromBytes(value));
+  }
+
+  get taker(): Bytes {
+    let value = this.get("taker");
+    return value.toBytes();
+  }
+
+  set taker(value: Bytes) {
+    this.set("taker", Value.fromBytes(value));
+  }
+
+  get payGem(): Bytes {
     let value = this.get("payGem");
-    return value.toString();
+    return value.toBytes();
   }
 
-  set payGem(value: string) {
-    this.set("payGem", Value.fromString(value));
+  set payGem(value: Bytes) {
+    this.set("payGem", Value.fromBytes(value));
   }
 
-  get buyGem(): string {
+  get buyGem(): Bytes {
     let value = this.get("buyGem");
-    return value.toString();
+    return value.toBytes();
   }
 
-  set buyGem(value: string) {
-    this.set("buyGem", Value.fromString(value));
+  set buyGem(value: Bytes) {
+    this.set("buyGem", Value.fromBytes(value));
   }
 
   get payAmount(): BigInt {
