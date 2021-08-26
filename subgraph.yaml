@@ -5,11 +5,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: RubiconMarket
-    network: kovan
+    network: optimism-kovan
     source:
       address: "0x1D44E2c486470Ccc8c72f38E816340569Ca9D98F"
       abi: RubiconMarket
-      startBlock: 12039666
+      startBlock: 1066453
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4

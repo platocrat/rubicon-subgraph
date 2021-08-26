@@ -3,8 +3,8 @@
 type UserTrade @entity {
   id: ID!
   isBuy: Boolean!
-  payGem: Bytes!
-  buyGem: Bytes!
+  payGem: String!
+  buyGem: String!
   payAmount: BigInt!
   buyAmount: BigInt!
   completed: Boolean!

@@ -131,44 +131,40 @@ import {
 
 export function handleLogKill(event: LogKill): void {
   let ep = event.params,
-    lkID = ep.id.toString(),
-    logKill = LogKillEntity.load(lkID)
-
-  // If no entity exists for this ID, we create it.
-  if (logKill == null) {
+    lkID = ep.id.toHexString(),
+    divisor = BigInt.fromI32(10).pow(18),
+    // Create new LogKill entity
     logKill = new LogKillEntity(lkID)
-  } else {
-    logKill.id = lkID
-    logKill.pair = ep.pair
-    logKill.maker = ep.maker
-    logKill.pay_gem = ep.pay_gem
-    logKill.buy_gem = ep.buy_gem
-    logKill.pay_amt = ep.pay_amt
-    logKill.buy_amt = ep.buy_amt
-    logKill.timestamp = ep.timestamp
-  }
+
+  logKill.id = lkID
+  logKill.logKillID = BigInt.fromUnsignedBytes(ep.id).div(divisor)
+  logKill.pair = ep.pair
+  logKill.maker = ep.maker
+  logKill.pay_gem = ep.pay_gem
+  logKill.buy_gem = ep.buy_gem
+  logKill.pay_amt = ep.pay_amt
+  logKill.buy_amt = ep.buy_amt
+  logKill.timestamp = ep.timestamp
 
   logKill.save()
 }
 
 export function handleLogMake(event: LogMake): void {
   let ep = event.params,
-    lmID = ep.id.toString(),
-    logMake = LogMakeEntity.load(lmID)
+    lmID = ep.id.toHexString(),
+    logMake = new LogMakeEntity(lmID),
+    // Create new LogMake entity
+    divisor = BigInt.fromI32(10).pow(18)
 
-  // If no entity exists for this ID, we create it.
-  if (logMake == null) {
-    logMake = new LogMakeEntity(lmID)
-  } else {
-    logMake.id = lmID
-    logMake.pair = ep.pair
-    logMake.maker = ep.maker
-    logMake.pay_gem = ep.pay_gem
-    logMake.buy_gem = ep.buy_gem
-    logMake.pay_amt = ep.pay_amt
-    logMake.buy_amt = ep.buy_amt
-    logMake.timestamp = ep.timestamp
-  }
+  logMake.id = lmID
+  logMake.logMakeID = BigInt.fromUnsignedBytes(ep.id).div(divisor)
+  logMake.pair = ep.pair
+  logMake.maker = ep.maker
+  logMake.pay_gem = ep.pay_gem
+  logMake.buy_gem = ep.buy_gem
+  logMake.pay_amt = ep.pay_amt
+  logMake.buy_amt = ep.buy_amt
+  logMake.timestamp = ep.timestamp
 
   logMake.save()
 }
@@ -189,22 +185,20 @@ export function handleLogMake(event: LogMake): void {
 
 export function handleLogTake(event: LogTake): void {
   let ep = event.params,
-    ltID = ep.id.toString(),
-    logTake = LogTakeEntity.load(ltID)
-
-  // If no entity exists for this ID, we create it.
-  if (logTake == null) {
+    ltID = ep.id.toHexString(),
+    divisor = BigInt.fromI32(10).pow(18),
+    // Create new LogTake entity
     logTake = new LogTakeEntity(ltID)
-  } else {
-    logTake.id = ltID
-    logTake.pair = ep.pair
-    logTake.maker = ep.maker
-    logTake.pay_gem = ep.pay_gem
-    logTake.buy_gem = ep.buy_gem
-    logTake.take_amt = ep.take_amt
-    logTake.give_amt = ep.give_amt
-    logTake.timestamp = ep.timestamp
-  }
+
+  logTake.id = ltID
+  logTake.logTakeID = BigInt.fromUnsignedBytes(ep.id).div(divisor)
+  logTake.pair = ep.pair
+  logTake.maker = ep.maker
+  logTake.pay_gem = ep.pay_gem
+  logTake.buy_gem = ep.buy_gem
+  logTake.take_amt = ep.take_amt
+  logTake.give_amt = ep.give_amt
+  logTake.timestamp = ep.timestamp
 
   logTake.save()
 }

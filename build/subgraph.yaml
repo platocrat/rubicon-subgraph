@@ -1,0 +1,36 @@
+specVersion: 0.0.2
+description: The Rubicon Protocol is a decentralized exchange protocol on the Ethereum
+  blockchain. It enables the peer-to-peer exchange of ERC20 tokens (the primary Ethereum
+  token standard).
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: RubiconMarket
+    network: optimism-kovan
+    source:
+      address: "0x1D44E2c486470Ccc8c72f38E816340569Ca9D98F"
+      abi: RubiconMarket
+      startBlock: 1066453
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: RubiconMarket/RubiconMarket.wasm
+      entities:
+        - LogKill
+        - LogMake
+        - LogTake
+      abis:
+        - name: RubiconMarket
+          file: RubiconMarket/abis/RubiconMarket.json
+      eventHandlers:
+        - event: LogKill(indexed bytes32,indexed bytes32,indexed
+            address,address,address,uint128,uint128,uint64)
+          handler: handleLogKill
+        - event: LogMake(indexed bytes32,indexed bytes32,indexed
+            address,address,address,uint128,uint128,uint64)
+          handler: handleLogMake
+        - event: LogTake(bytes32,indexed bytes32,indexed address,address,address,indexed
+            address,uint128,uint128,uint64)
+          handler: handleLogTake

@@ -51,22 +51,22 @@ export class UserTrade extends Entity {
     this.set("isBuy", Value.fromBoolean(value));
   }
 
-  get payGem(): Bytes {
+  get payGem(): string {
     let value = this.get("payGem");
-    return value.toBytes();
+    return value.toString();
   }
 
-  set payGem(value: Bytes) {
-    this.set("payGem", Value.fromBytes(value));
+  set payGem(value: string) {
+    this.set("payGem", Value.fromString(value));
   }
 
-  get buyGem(): Bytes {
+  get buyGem(): string {
     let value = this.get("buyGem");
-    return value.toBytes();
+    return value.toString();
   }
 
-  set buyGem(value: Bytes) {
-    this.set("buyGem", Value.fromBytes(value));
+  set buyGem(value: string) {
+    this.set("buyGem", Value.fromString(value));
   }
 
   get payAmount(): BigInt {
@@ -105,21 +105,13 @@ export class UserTrade extends Entity {
     this.set("killed", Value.fromBoolean(value));
   }
 
-  get timestamp(): BigInt | null {
+  get timestamp(): BigInt {
     let value = this.get("timestamp");
-    if (value === null || value.kind == ValueKind.NULL) {
-      return null;
-    } else {
-      return value.toBigInt();
-    }
+    return value.toBigInt();
   }
 
-  set timestamp(value: BigInt | null) {
-    if (value === null) {
-      this.unset("timestamp");
-    } else {
-      this.set("timestamp", Value.fromBigInt(value as BigInt));
-    }
+  set timestamp(value: BigInt) {
+    this.set("timestamp", Value.fromBigInt(value));
   }
 
   get transactionHash(): Bytes {
@@ -160,6 +152,15 @@ export class LogMake extends Entity {
 
   set id(value: string) {
     this.set("id", Value.fromString(value));
+  }
+
+  get logMakeID(): BigInt {
+    let value = this.get("logMakeID");
+    return value.toBigInt();
+  }
+
+  set logMakeID(value: BigInt) {
+    this.set("logMakeID", Value.fromBigInt(value));
   }
 
   get pair(): Bytes {
@@ -256,6 +257,15 @@ export class LogTake extends Entity {
     this.set("id", Value.fromString(value));
   }
 
+  get logTakeID(): BigInt {
+    let value = this.get("logTakeID");
+    return value.toBigInt();
+  }
+
+  set logTakeID(value: BigInt) {
+    this.set("logTakeID", Value.fromBigInt(value));
+  }
+
   get pair(): Bytes {
     let value = this.get("pair");
     return value.toBytes();
@@ -348,6 +358,15 @@ export class LogKill extends Entity {
 
   set id(value: string) {
     this.set("id", Value.fromString(value));
+  }
+
+  get logKillID(): BigInt {
+    let value = this.get("logKillID");
+    return value.toBigInt();
+  }
+
+  set logKillID(value: BigInt) {
+    this.set("logKillID", Value.fromBigInt(value));
   }
 
   get pair(): Bytes {
