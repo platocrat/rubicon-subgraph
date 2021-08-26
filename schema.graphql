@@ -47,6 +47,7 @@ type LogMake @entity {
   pay_amt: BigInt!
   buy_amt: BigInt!
   timestamp: BigInt!
+  transactionHash: Bytes!
 }
 
 # """
@@ -77,6 +78,7 @@ type LogTake @entity {
   take_amt: BigInt!
   give_amt: BigInt!
   timestamp: BigInt!
+  transactionHash: Bytes!
 }
 
 """
@@ -92,6 +94,7 @@ type LogKill @entity {
   pay_amt: BigInt!
   buy_amt: BigInt!
   timestamp: BigInt!
+  transactionHash: Bytes!
 }
 
 # """

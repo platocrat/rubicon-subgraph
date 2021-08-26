@@ -152,6 +152,7 @@ export function handleLogKill(event: LogKill): void {
   logKill.pay_amt = ep.pay_amt
   logKill.buy_amt = ep.buy_amt
   logKill.timestamp = ep.timestamp
+  logKill.transactionHash = ep._event.transaction.hash
 
   if (userTrade != null) {
     // Update to the `id` of the emitted LogKill event.
@@ -203,6 +204,7 @@ export function handleLogMake(event: LogMake): void {
   logMake.pay_amt = ep.pay_amt
   logMake.buy_amt = ep.buy_amt
   logMake.timestamp = ep.timestamp
+  logMake.transactionHash = ep._event.transaction.hash
 
   // Set to the `id` of the emitted LogMake event.
   userTrade.id = lmID
@@ -258,6 +260,7 @@ export function handleLogTake(event: LogTake): void {
   logTake.take_amt = ep.take_amt
   logTake.give_amt = ep.give_amt
   logTake.timestamp = ep.timestamp
+  logTake.transactionHash = ep._event.transaction.hash
 
   if (userTrade != null) {
     // Update to the `id` of the emitted LogTake event.
