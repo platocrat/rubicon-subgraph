@@ -302,6 +302,15 @@ export class LogTake extends Entity {
     this.set("maker", Value.fromBytes(value));
   }
 
+  get taker(): Bytes {
+    let value = this.get("taker");
+    return value.toBytes();
+  }
+
+  set taker(value: Bytes) {
+    this.set("taker", Value.fromBytes(value));
+  }
+
   get pay_gem(): Bytes {
     let value = this.get("pay_gem");
     return value.toBytes();

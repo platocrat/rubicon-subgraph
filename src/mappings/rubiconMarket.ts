@@ -252,6 +252,7 @@ export function handleLogTake(event: LogTake): void {
   logTake.logTakeID = BigInt.fromUnsignedBytes(ep.id).div(divisor)
   logTake.pair = ep.pair
   logTake.maker = ep.maker
+  logTake.taker = ep.taker
   logTake.pay_gem = ep.pay_gem
   logTake.buy_gem = ep.buy_gem
   logTake.take_amt = ep.take_amt

@@ -71,6 +71,7 @@ type LogTake @entity {
   logTakeID: BigInt!
   pair: Bytes!
   maker: Bytes!
+  taker: Bytes!
   pay_gem: Bytes!
   buy_gem: Bytes!
   take_amt: BigInt!
