@@ -2,9 +2,11 @@
 
 type UserTrade @entity {
   id: ID!
-  isBuy: Boolean!
-  payGem: String!
-  buyGem: String!
+  isLimit: Boolean!
+	maker: Bytes!
+	taker: Bytes!
+  payGem: Bytes!
+  buyGem: Bytes!
   payAmount: BigInt!
   buyAmount: BigInt!
   completed: Boolean!
