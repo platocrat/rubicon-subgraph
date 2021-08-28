@@ -2,7 +2,9 @@
 
 (Legacy) Subgraph for Rubicon Finance's `RubiconMarket` contract _on Kovan_.
 
-> Please see The Graph's documentation on how to [Create a Subgraph](https://thegraph.com/docs/developer/create-subgraph-hosted) for a disambiguation between a [Subgraph Studio](https://thegraph.com/studio) and the [Legacy Explorer](https://thegraph.com/legacy-explorer).
+Subgraph for Rubicon Finance's `RubiconMarket` contract on The Graph's [Legacy Explorer](https://thegraph.com/legacy-explorer).
+
+> See [The Graph's documentation](https://thegraph.com/docs/developer/create-subgraph-hosted)) on how what the difference is between a subgraph on a Legacy Explorer and a subgraph on [Subgraph Studio](https://thegraph.com/studio).
 
 ## Using the access token to deploy the subgraph
 

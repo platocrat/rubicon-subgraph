@@ -39,7 +39,7 @@ type UserTrade @entity {
 """
 type LogMake @entity {
   id: ID!
-  logMakeID: BigInt!
+  logMakeID: Int!
   pair: Bytes!
   maker: Bytes!
   pay_gem: Bytes!
@@ -69,7 +69,7 @@ type LogMake @entity {
 """
 type LogTake @entity {
   id: ID!
-  logTakeID: BigInt!
+  logTakeID: Int!
   pair: Bytes!
   maker: Bytes!
   taker: Bytes!
@@ -86,7 +86,7 @@ type LogTake @entity {
 """
 type LogKill @entity {
   id: ID!
-  logKillID: BigInt!
+  logKillID: Int!
   pair: Bytes!
   maker: Bytes!
   pay_gem: Bytes!
