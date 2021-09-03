@@ -1,6 +1,6 @@
-# Rubicon Subgraph
+# Rubicon Subgraph (Optimistic Mainnet)
 
-(Legacy) Subgraph for Rubicon Finance's `RubiconMarket` contract _on Kovan_.
+(Legacy) Subgraph for Rubicon Finance's `RubiconMarket` contract _on Optimistic Mainnet_.
 
 Subgraph for Rubicon Finance's `RubiconMarket` contract on The Graph's [Legacy Explorer](https://thegraph.com/legacy-explorer).
 
