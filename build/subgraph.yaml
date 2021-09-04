@@ -46,16 +46,10 @@ templates:
       language: wasm/assemblyscript
       file: templates/BathToken/BathToken.wasm
       entities:
-        - BathToken
-        - BathHouse
-        - RubiconMarket
+        - Deposit
       abis:
         - name: BathToken
           file: BathToken/abis/rubiconPools/BathToken.json
-        - name: BathHouse
-          file: BathToken/abis/rubiconPools/BathHouse.json
-        - name: RubiconMarket
-          file: BathToken/abis/RubiconMarket.json
       eventHandlers:
         - event: Deposit(uint256,address,uint256,address)
           handler: handleDeposit
