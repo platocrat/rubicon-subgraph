@@ -34,3 +34,28 @@ dataSources:
         - event: LogTake(bytes32,indexed bytes32,indexed address,address,address,indexed
             address,uint128,uint128,uint64)
           handler: handleLogTake
+templates:
+  - name: BathToken
+    kind: ethereum/contract
+    network: optimism
+    source:
+      abi: BathToken
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: templates/BathToken/BathToken.wasm
+      entities:
+        - BathToken
+        - BathHouse
+        - RubiconMarket
+      abis:
+        - name: BathToken
+          file: BathToken/abis/rubiconPools/BathToken.json
+        - name: BathHouse
+          file: BathToken/abis/rubiconPools/BathHouse.json
+        - name: RubiconMarket
+          file: BathToken/abis/RubiconMarket.json
+      eventHandlers:
+        - event: Deposit(uint256,address,uint256,address)
+          handler: handleDeposit
