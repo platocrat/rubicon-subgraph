@@ -12,7 +12,7 @@ dataSources:
       address: "0x66EF90859982DF25b6Ab627f044910B04A60aFc0" # THIS IS FOR OPTIMISTIC MAINNET
       abi: RubiconMarket
       # startBlock: 1066453
-      startBlock: 660180 # THIS IS FOR OPTIMISTIC MAINNET
+      startBlock: 55000 # THIS IS FOR OPTIMISTIC MAINNET
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
