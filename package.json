@@ -4,10 +4,10 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ platocrat/rubicon",
-    "create-local": "graph create --node http://localhost:8020/ platocrat/rubicon",
-    "remove-local": "graph remove --node http://localhost:8020/ platocrat/rubicon",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 platocrat/rubicon"
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ platocrat/rubicon-subgraph",
+    "create-local": "graph create --node http://localhost:8020/ platocrat/rubicon-subgraph",
+    "remove-local": "graph remove --node http://localhost:8020/ platocrat/rubicon-subgraph",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 platocrat/rubicon-subgraph"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "^0.22.3",
